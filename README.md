@@ -33,34 +33,34 @@ Then I am given a list of tasty recipes
 
 
 ## Installation
-`#npm init -y`
-`$npm install express`
-`$npm install sequelize`
-`$npm install mysql2`
-`$npm install express-handlebars`
-`$npm install bcrypt`
-`$npm run seeds`
+`#npm init -y`<br/>
+`$npm install express`<br/>
+`$npm install sequelize`<br/>
+`$npm install mysql2`<br/>
+`$npm install express-handlebars`<br/>
+`$npm install bcrypt`<br/>
+`$npm run seeds`<br/>
 `$npm start`
 
 ## Collaborators
-Kosal Cheykim
-Kurtis Hight
-Jose Rivera
+Kosal Cheykim<br/>
+Kurtis Hight<br/>
+Jose Rivera<br/>
 Ching Leung
 
 ## Challenges
 
 
 ## Email
-`Kosal Cheykim:` kosalcheykim@gmail.com
-`Kurtis Hight:` hightkurtis@gmail.com
-`Jose Rivera:` riverajose1796@gmail.com
+`Kosal Cheykim:` kosalcheykim@gmail.com<br/>
+`Kurtis Hight:` hightkurtis@gmail.com<br/>
+`Jose Rivera:` riverajose1796@gmail.com<br/>
 `Ching Leung:` ricxx0320@gmail.com
 
 ## Github
-`Kosal Cheykim:` https://github.com/kcheykim
-`Kurtis Hight:` https://github.com/mockcomic
-`Jose Rivera:` https://github.com/jrera1796
+`Kosal Cheykim:` https://github.com/kcheykim<br/>
+`Kurtis Hight:` https://github.com/mockcomic<br/>
+`Jose Rivera:` https://github.com/jrera1796<br/>
 `Ching Leung:` https://github.com/ricky0320
 
 ## WebSite
