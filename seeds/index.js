@@ -1,0 +1,1 @@
+const seedUsers = require('./user-seeds');
