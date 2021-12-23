@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { Rating } = require('../../models');
+
+const {Rating} = require('../../models/');
 
 
 router.post('/', async (req, res) => {
@@ -12,7 +13,7 @@ router.post('/', async (req, res) => {
     });
     res.status(200).json(RatingData);
   } catch (err) {
-    res.status(400).json(err);
+   console.log(err)
     res.status(400).json({Status: "Couldn't post"})
   }
 });
