@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-const models = {Rating: require('./Rating')}
-
-module.exports = models;
-=======
 //importing all of the models: User, Recipe, Rating
 //const User = require('./User');
 const Recipe = require('./Recipe');
@@ -20,4 +15,3 @@ Recipe.hasMany(Rating, { foreignKey: 'rating_id' });
 
 //module.exports = { User, Recipe, Rating};
 module.exports = { Recipe, Rating };
->>>>>>> kcheykim/recipe_seed
