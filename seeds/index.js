@@ -1,13 +1,23 @@
-const seedUsers = require('./user-seeds');
+//const seedUsers = require('./user-seeds');
+const seedRecipes = require('./recipe-seeds');
+const seedRating = require('./ratingData');
+
 const sequelize = require('../config/connection');
-const seedRating= require('./ratingData');
 
-const seedAll = async () => {
-  await sequelize.sync({ force: true });
+const seedAll = async() => {
+    await sequelize.sync({ force: true });
+    console.log('\n----- DATABASE SYNCED -----\n');
 
-  await seedRating();
+    //await seedUsers();
+    //console.log('\n----- USERS SEEDED -----\n');
 
-  process.exit(0);
+    await seedRecipes();
+    console.log('\n----- RECIPES SEEDED -----\n');
+
+    await seedRating();
+    console.log('\n----- RATINGS SEEDED -----\n');
+
+    process.exit(0);
 };
 
 seedAll();
