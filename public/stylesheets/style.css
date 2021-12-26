@@ -1,3 +1,17 @@
 * {
     box-sizing: border-box;
 }
+
+header {
+    padding: 20px 35px 10px 0px;
+    border-bottom: solid rgb(85, 85, 153) 5px; 
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    }
+
+header nav ul li :hover {
+    background: hsl(217, 71%, 53%) !important;
+}
+
+
