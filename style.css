@@ -1,3 +1,7 @@
+ header nav ul li a i {
+    font-size: 2x;
+    color:rgb(194, 87, 221) !important;
+ }
 
 header {
     padding: 20px 35px 10px 0px;
