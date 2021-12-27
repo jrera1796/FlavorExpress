@@ -16,6 +16,6 @@ router.post('/', async (req, res) => {
    console.log(err)
     res.status(400).json({Status: "Couldn't post"})
   }
-});
+})
 
 module.exports = router;
