@@ -10,8 +10,6 @@ router.post('/', async (req, res) => {
       rating_score: req.body.rating_score,
       user_id: req.body.user_id,
       recipe_id: req.body.recipe_id
-      
-
     });
     res.status(200).json(RatingData);
   } catch (err) {
