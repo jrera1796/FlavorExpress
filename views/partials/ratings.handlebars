@@ -1,0 +1,24 @@
+<div class="ratings">
+  {{#each this}}
+  <section class="rating">
+    <div class="meta" style="inline-flex">
+      {{user.username}} on {{created_at}}
+      {{#if rating_score.value}}
+      {{#each rating_score.value}}
+      <span class="fa fa-star checked"></span>
+      {{/each}}
+      {{/if}}
+      {{else}}
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      {{/else}}
+    </div>
+    <div class="text">
+      {{rating_comment}}
+    </div>
+  </section>
+  {{/each}}
+</div>
