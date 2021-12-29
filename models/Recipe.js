@@ -40,7 +40,7 @@ Recipe.init({
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'rating'
+    modelName: 'recipe'
 });
 
 module.exports = Recipe;
