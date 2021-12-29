@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <script src="https://kit.fontawesome.com/1e89e92bcf.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Flavor Express</title>
+
+</head>
+
+<body>
+  <header>
+    <h1 class="mb-2">
+      <span style="font-size: 3rem; color: Tomato;"></i>
+        <i class="fas fa-hotdog ml-3 mr-1"></i>
+      </span>
+      <a href="./main.html" class="is title is spaced">Flavor Express</a>
+    </h1>  
+        <nav class="subtitle tabs is-boxed level-right columns is-5">
+          <ul class="is-active">
+            <li>
+              <a href="./recipes.html" class="">
+                <span style="font: size 2x;">
+                  <i class="fas fa-utensils mr-1"></i>
+                </span>Recipes
+              </a>
+            </li>
+
+            <li>
+              <a href="./comment.html" class="">
+                <span style="font: size 2x;">
+                  <i class="far fa-comment-dots mr-1"></i>
+                </span>Comment
+              </a>
+            </li>
+
+            <li>
+              <a href="./login.html" class="">
+                <span>
+                  <i class="fas fa-sign-in-alt mr-1"></i>
+                </span>Login/Sign up
+              </a>
+            </li>
+
+
+            <button id="logout" class="button is-medium is-warning">logout</button>
+            
+          </ul>
+        </nav>
+    </header>
+
+  <main>
+    <section>
+      <div class="container has-text-link is-size-4 mt-3 ml-4">
+      <h2 class="is info">Search recipes</h2>
+      <h2> Contains:</h2>
+      <div class="food-type mt-2 is-7">
+        <label class="checkbox">
+          <input type="checkbox">
+          Chicken
+        </label>
+
+        <label class="checkbox">
+          <input type="checkbox">
+          Beef
+        </label>
+
+        <label class="checkbox">
+          <input type="checkbox">
+          Veggie
+        </label>
+
+        <label class="checkbox">
+          <input type="checkbox">
+          Pork
+        </label>
+
+        <label class="checkbox">
+          <input type="checkbox">
+          Fish
+        </label>
+      </div>
+     </div>
+    </section>
+
+    <div class="has-text-link is-size-4 mt-3 ml-4">
+      <input type="text" id="search-recipe" /> 
+      <div class="field">
+        <button class="sign-in button is-success is-small">
+          Search
+        </button>
+      </div>    
+    </div>
+
+  </main>
+
+</body>
+</html>

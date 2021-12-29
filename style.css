@@ -1,6 +1,7 @@
-* {
-    box-sizing: border-box;
-}
+ header nav ul li a i {
+    font-size: 2x;
+    color:rgb(194, 87, 221) !important;
+ }
 
 header {
     padding: 20px 35px 10px 0px;
@@ -10,8 +11,10 @@ header {
     flex-wrap: wrap;
     }
 
+header nav ul {
+    border-bottom: 0 !important;
+}
+
 header nav ul li :hover {
     background: hsl(217, 71%, 53%) !important;
 }
-
-
