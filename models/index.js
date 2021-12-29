@@ -1,3 +1,19 @@
-const models = { Rating: require('./Rating') }
+const User = require('./User');
+const Rating = require('./Rating');
+const Recipe = require('./Recipe');
+// const models = {Rating: require('./Rating')}
 
-module.exports = models;
+User.hasMany(Recipe, {
+    foreignKey: 'user_id'
+});
+
+User.hasOne(Rating, {
+    foreignKey: 'user_id'
+});
+
+Rating.belongsTo(Recipe, {
+    foreignKey: 'rating_id'
+})
+
+
+module.exports = { User, Rating, Recipe };
