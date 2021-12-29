@@ -11,8 +11,10 @@ header {
     flex-wrap: wrap;
     }
 
+header nav ul {
+    border-bottom: 0 !important;
+}
+
 header nav ul li :hover {
     background: hsl(217, 71%, 53%) !important;
 }
-
-
