@@ -28,13 +28,13 @@ Recipe.init({
             model: 'user',
             key: 'id'
         }
-    },
-    rating_id: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: 'rating',
-            key: 'id'
-        }
+        // },
+        // rating_id: {
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //         model: 'rating',
+        //         key: 'id'
+        //     }
     }
 }, {
     sequelize,
