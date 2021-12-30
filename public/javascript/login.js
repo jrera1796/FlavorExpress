@@ -36,10 +36,10 @@ const loginHandler = async (event) => {
   };
   
   document
-    .querySelector('.login-form')
+    .getElementById('login-form')
     .addEventListener('click', loginHandler);
   
   document
-    .querySelector('.signup-form')
+    .getElementById('signup-form')
     .addEventListener('click', signupHandler);
   
