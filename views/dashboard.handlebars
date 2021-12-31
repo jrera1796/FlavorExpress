@@ -1,0 +1,31 @@
+<section>
+  <h2>Post New Recipe</h2>
+
+  <form class="new-recipe-form">
+    <div>
+      <label for="post-ingredients">Ingredients</label>
+      <textarea type="text" id="post-ingredients" name="post-ingredients" />
+    </div>
+    <div>
+      <label for="post-direction">Direction</label>
+      <textarea id="post-direction" name="post-direction" />
+    </div>
+    <button type="submit" class="btn">Submit New Recipe</button>
+  </form>
+</section>
+
+{{#if recipe.length}}
+<section>
+  <h2>Your Recipes</h2>
+  <ol>git 
+    {{#each recipes as |recipe|}}
+    <li>
+      {{!-- {{> recipe-info post}} --}}
+      <a href="/dashboard/edit/{{recipe.id}}" class="edit-recipe-link">Edit Recipe</a>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
+
+<script src="/javascript/add-recipe.js"></script>
