@@ -10,6 +10,10 @@ Recipe.init({
         primaryKey: true,
         autoIncrement: true
     },
+    title: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
     ingredients: {
         type: DataTypes.STRING,
         allowNull: false

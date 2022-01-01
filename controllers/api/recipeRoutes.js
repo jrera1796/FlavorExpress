@@ -21,7 +21,7 @@ router.get('/:id', (req, res) => { //get a specific recipe
         where: { id: req.params.id }, //find by its `id`
         include: [{ //include its associated Rating
                 model: Rating,
-                attributes: ['id', 'rating_coment', 'rating_score'],
+                attributes: ['id', 'rating_comment', 'rating_score'],
                 include: { model: User, attributes: ['username'] }
             }, //include its associated User
             { model: User, attributes: ['username'] }
