@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <script src="https://kit.fontawesome.com/1e89e92bcf.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <h1 class="mb-2">
+      <span style="font-size: 3rem; color: Tomato;"></i>
+        <i class="fas fa-hotdog ml-3 mr-1"></i>
+      </span>
+      <a href="./main.html" class="is title is spaced">Flavor Express</a>
+    </h1>
+    <nav class="subtitle tabs is-boxed level-right columns is-5">
+      <ul class="is-active">
+        <li>
+          <a href="./recipes.html" class="">
+            <span style="font: size 2x;">
+              <i class="fas fa-utensils mr-1"></i>
+            </span>Recipes
+          </a>
+        </li>
+        <li>
+          <a href="./comment.html" class="">
+            <span style="font: size 2x;">
+              <i class="far fa-comment-dots mr-1"></i>
+            </span>Comment
+          </a>
+        </li>
+        <li>
+          <a href="./login.html" class="">
+            <span>
+              <i class="fas fa-sign-in-alt mr-1"></i>
+            </span>Login/Sign up
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="hero is-primary is-fullheight">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column is-5-tablet is-4-desktop is-3-widescreen">
+
+              <form action="" class="box">
+                <div class="field">
+                  <label for="email-login" class="label">Email</label>
+                  <div class="control has-icons-left">
+                    <input type="email" placeholder="e.g. Tasty@gmail.com" class="input" id="email-login" />
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-envelope"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="password-login" class="label">Password</label>
+                  <div class="control has-icons-left">
+                    <input type="password" class="input" id="password-login" />
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-lock"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="field">
+                </div>
+                <div class="field">
+                  <button class="login button is-success" id="login-form">
+                    Login
+                  </button>
+                </div>
+                <div class="field">
+                  <label for="username-signup" class="label">Email</label>
+                  <div class="control has-icons-left">
+                    <input type="email" placeholder="e.g. Tasty@gmail.com" class="input" id="email-signup" />
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-envelope"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="password-signup" class="label">Password</label>
+                  <div class="control has-icons-left">
+                    <input type="password" class="input" id="password-signup" />
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-lock"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="field">
+                </div>
+                <div class="field">
+                  <button class="sign-in button is-success" id="signup-form">
+                    Sign Up
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./js/login.js"></script>
+  </main>
+</body>
+
+</html>
