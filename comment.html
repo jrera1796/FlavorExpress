@@ -30,10 +30,10 @@
             </li>
 
             <li>
-              <a href="./comment.html" class="">
+              <a href="./dashboard.html" class="">
                 <span style="font: size 2x;">
                   <i class="far fa-comment-dots mr-1"></i>
-                </span>Comment
+                </span>Dashboard
               </a>
             </li>
 
@@ -51,43 +51,37 @@
           </ul>
         </nav>
     </header>
-
-    <section class="hero is-primary is-fullheight">
-      <div class="hero-body">
-        <div class="container">
-          <div class="columns is-centered is-wide">
-            <div class="column is-5-tablet is-3-desktop is-3-widescreen">
-              <form action="" class="box">
-                <div class="field">
-                  <label for="" class="label">Your Comment:</label>
-                  <article class="media">
-                  <div class="media-content">
-
-                    <div class="field">
-                      <p class="control">
-                        <textarea class="textarea" placeholder="Add a comment..."></textarea>
-                      </p>
-                    </div>
-                <div class="field">
-                  <button class="create button is-success">
-                    Create
-                  </button>
-                </div>
-                </article>
-                </div>
-              </form>
-            </div>
-          </div>
+    <section class="container">
+      <div class="tile is-parent has-background-primary">
+    <article class="media">
+      <div class="media-content">
+        <div class="content">
+          <p>
+            <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+          </p>
         </div>
+        <nav class="level is-mobile">
+          <div class="level-left">
+            <a class="level-item">
+              <span class="icon is-small"><i class="fas fa-reply"></i></span>
+            </a>
+            <a class="level-item">
+              <span class="icon is-small"><i class="fas fa-retweet"></i></span>
+            </a>
+            <a class="level-item">
+              <span class="icon is-small"><i class="fas fa-heart"></i></span>
+            </a>
+          </div>
+        </nav>
       </div>
-    </section>        
-
-  <section>
-    <h2>Your Posts</h2>
-    <ol>
-      
-      <li>
-        
+      <div class="media-right">
+        <button class="delete"></button>
+      </div>
+    </article>
+   </div>
+  </section class="container">
         <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
       </li>
       

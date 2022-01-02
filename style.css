@@ -9,6 +9,10 @@ header {
     display:flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
     }
 
 header nav ul {
@@ -18,3 +22,42 @@ header nav ul {
 header nav ul li :hover {
     background: hsl(217, 71%, 53%) !important;
 }
+
+.parallax {
+    background:url('public/img/fruit-in-water.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1 !important;
+    
+}
+
+.parallax-2 {
+    background:url('public/img/bakery.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -2 !important;
+    
+}
+
+.bg-image {
+    height: 600px;
+}
+
+/* @media screen and (max-width: 768px){
+    .bg-image {
+
+        display:flex;
+        flex-wrap: wrap;
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .bg-image {
+
+        display:flex;
+        flex-wrap: wrap;
+        font-size: 20px;
+    
+    }
+} */
