@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+
 
 <head>
   <meta charset="UTF-8">
@@ -10,49 +9,17 @@
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
-
+{{!-- 
 <body>
-  <header>
-    <h1 class="mb-2">
-      <span style="font-size: 3rem; color: Tomato;"></i>
-        <i class="fas fa-hotdog ml-3 mr-1"></i>
-      </span>
-      <a href="./main.html" class="is title is spaced">Flavor Express</a>
-    </h1>
-    <nav class="subtitle tabs is-boxed level-right columns is-5">
-      <ul class="is-active">
-        <li>
-          <a href="./recipes.html" class="">
-            <span style="font: size 2x;">
-              <i class="fas fa-utensils mr-1"></i>
-            </span>Recipes
-          </a>
-        </li>
-        <li>
-          <a href="./comment.html" class="">
-            <span style="font: size 2x;">
-              <i class="far fa-comment-dots mr-1"></i>
-            </span>Comment
-          </a>
-        </li>
-        <li>
-          <a href="./login.html" class="">
-            <span>
-              <i class="fas fa-sign-in-alt mr-1"></i>
-            </span>Login/Sign up
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <main>
+  
+  <main> --}}
     <section class="hero is-primary is-fullheight">
       <div class="hero-body">
         <div class="container">
           <div class="columns is-centered">
             <div class="column is-5-tablet is-4-desktop is-3-widescreen">
 
-              <form action="" class="box">
+              <form action="" class="login-form">
                 <div class="field">
                   <label for="email-login" class="label">Email</label>
                   <div class="control has-icons-left">
@@ -74,9 +41,20 @@
                 <div class="field">
                 </div>
                 <div class="field">
-                  <button class="login button is-success" id="login-form">
+                  <button type="submit" class="login button is-success" >
                     Login
                   </button>
+                </div>
+              </form>
+              <form class="signup-form"></form>
+                <div class="field">
+                  <label for="username-signup" class="label">Username</label>
+                  <div class="control has-icons-left">
+                    <input type="text" class="input" id="username-signup" />
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-lock"></i>
+                    </span>
+                  </div>
                 </div>
                 <div class="field">
                   <label for="username-signup" class="label">Email</label>
@@ -100,7 +78,7 @@
                 <div class="field">
                 </div>
                 <div class="field">
-                  <button class="sign-in button is-success" id="signup-form">
+                  <button type="submit" class="sign-in button is-success" id="signup-form">
                     Sign Up
                   </button>
                 </div>
@@ -110,8 +88,39 @@
         </div>
       </div>
     </section>
-    <script src="./js/login.js"></script>
-  </main>
-</body>
+    <script src="./javascript/login.js"></script>
+  {{!-- </main>
+</body> --}}
+{{!-- <form class="login-form">
+  <div>
+    <label for="email-login">email:</label>
+    <input type="text" id="email-login" />
+  </div>
+  <div>
+    <label for="password-login">password:</label>
+    <input type="password" id="password-login" />
+  </div>
+  <div>
+    <button type="submit">login</button>
+  </div>
+</form>
 
-</html>
+<form class="signup-form">
+  <div>
+    <label for="username-signup">username:</label>
+    <input type="text" id="username-signup" />
+  </div>
+  <div>
+    <label for="email-signup">email:</label>
+    <input type="text" id="email-signup" />
+  </div>
+  <div>
+    <label for="password-signup">password:</label>
+    <input type="password" id="password-signup" />
+  </div>
+  <div>
+    <button type="submit">signup</button>
+  </div>
+</form>
+
+<script src="/javascript/login.js"></script> --}}

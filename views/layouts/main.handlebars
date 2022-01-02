@@ -17,26 +17,21 @@
       <a href="/" class="is title is spaced">Flavor Express</a>
     </h1>
     <nav class="subtitle tabs is-boxed level-right columns is-5">
+     
       <ul class="is-active">
+         {{#if loggedIn}}
         <li>
-          <a href="/" class="">
-            <span style="font: size 2x;">
-              <i class="fas fa-utensils mr-1"></i>
-            </span>Homepage
-          </a>
-        </li>
-        <li>
-          <a href="./dashboard" class="">
+          <a href="/dashboard" class="">
             <span style="font: size 2x;">
               <i class="far fa-comment-dots mr-1"></i>
             </span>Dashboard
           </a>
         </li>
-        {{#if loggedIn}}
+        
         <button id="logout">Logout</button>
         {{else}}
         <li>
-          <a href="./login" class="">
+          <a href="/login" class="">
             <span>
               <i class="fas fa-sign-in-alt mr-1"></i>
             </span>Login/Sign up
@@ -53,7 +48,7 @@
   </main>
 
   {{#if loggedIn}}
-  <script src="/js/logout.js"></script>
+  <script src="/javascript/logout.js"></script>
   {{/if}}
 </body>
 

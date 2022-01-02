@@ -1,0 +1,14 @@
+{{> recipe-info recipe}}
+
+{{#if loggedIn}}
+<form class="rating-form">
+  <div><textarea name="rating-body"></textarea></div>
+  <div><button type="submit">Rate It</button> </div>
+</form>
+{{/if}}
+
+{{> ratings recipe.ratings}}
+
+{{#if loggedIn}}
+<script src="/javascript/ratingHandler.js"></script>
+{{/if}}
