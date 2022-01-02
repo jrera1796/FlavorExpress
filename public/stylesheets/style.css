@@ -1,6 +1,7 @@
-* {
-    box-sizing: border-box;
-}
+header nav ul li a i {
+    font-size: 2x;
+    color:rgb(194, 87, 221) !important;
+ }
 
 header {
     padding: 20px 35px 10px 0px;
@@ -10,8 +11,53 @@ header {
     flex-wrap: wrap;
     }
 
+header nav ul {
+    border-bottom: 0 !important;
+}
+
 header nav ul li :hover {
     background: hsl(217, 71%, 53%) !important;
 }
 
+.parallax {
+    background:url('../img/fruit-in-water.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;  
+   
+    
+}
 
+.parallax-2 {
+    background:url('../img/avocado.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;   
+}
+
+.parallax-3 {
+    background:url('../img/spices.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.parallax-4 {
+    background:url('../img/spaghetti.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.parallax-5 {
+    background:url('../img/steak.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;   
+}
+
+.bg-image {
+    height: 1000px;
+}
+
+
+footer {
+    padding-bottom: 70px !important;
+}
