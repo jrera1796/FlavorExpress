@@ -2,8 +2,8 @@
   {{#each this}}
   <section class="rating">
     <div class="meta" style="inline-flex">
-      {{user.username}} on {{created_at}}
-      {{#if rating_score.value}}
+      {{user.username}} on {{format_date created_at}}
+      {{!-- {{#if rating_score.value}}
       {{#each rating_score.value}}
       <span class="fa fa-cookie-bite"></span>
       {{/each}}
@@ -19,6 +19,12 @@
     <div class="text">
       {{rating_comment}}
     </div>
+  </section>
+  {{/each}}
+</div> --}}
+
+</div>
+    <div class="text">{{rating_comment}}</div>
   </section>
   {{/each}}
 </div>

@@ -31,8 +31,13 @@ app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
-
 app.use(require('./controllers/'));
+// app.use(express.static('images'));
+
+// // Route to display static src images
+// app.get("/static", (req, res) => {
+//     res.render("static");
+// });
 
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Now listening'));

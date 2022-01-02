@@ -4,7 +4,7 @@ const withAuth = require('../../utils/auth');
 
 router.get('/', (req, res) => { //recipe endpoints
     Recipe.findAll({ //find all recipes
-            attributes: ['id', 'photo_path', 'created_at'],
+            attributes: ['id', 'title', 'photo_path', 'created_at'],
             include: [{ //include its associated Rating
                     model: Rating,
                     attributes: ['id', 'rating_comment', 'rating_score'],
@@ -37,16 +37,18 @@ router.get('/:id', (req, res) => { //get a specific recipe
 
 router.post('/', withAuth, (req, res) => { //posting a new recipe
     Recipe.create({ //expecting ingredients, direction and photo upload
+            title: req.body.title,
             ingredients: req.body.ingredients,
             direction: req.body.direction,
-            //here is where photo_path needs to upload the photo
-            user_id: require.session.user_id
+            photo_path: req.body.photo_path,
+            user_id: req.session.user_id
         }).then(recipeData => res.json(recipeData))
         .catch(err => { res.status(500).json(err); });
 });
 
 router.put('/:id', withAuth, (req, res) => {
     Recipe.update({
+        title: req.body.title,
         ingredients: req.body.ingredients,
         direction: req.body.direction,
         //upload new photo options here or path

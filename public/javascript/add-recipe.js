@@ -1,13 +1,13 @@
 async function newFormHandler(event) {
     event.preventDefault();
-
-    const ingredient = document.querySelector('textarea[name="post-ingredients"]').value.trim();
-    const direction = document.querySelector('textarea[name="post-direction"]').value.trim();
-    const photo_url = document.querySelector('input[name="post-url"]').value;
+    const title = document.querySelector('input[name="new-title"]').value;
+    const ingredients = document.querySelector('textarea[name="new-ingredients"]').value.trim();
+    const direction = document.querySelector('textarea[name="new-direction"]').value.trim();
+    const photo_url = document.querySelector('input[name="new-photo"]').value;
 
     const response = await fetch(`/api/recipes`, {
         method: 'POST',
-        body: JSON.stringify({ ingredient, direction, photo_url }),
+        body: JSON.stringify({ title, ingredients, direction, photo_url }),
         headers: { 'Content-Type': 'application/json' }
     });
 

@@ -1,0 +1,44 @@
+<article>
+  <a href="/dashboard"> &larr; Back to My Dashboard</a>
+  <h2>Edit Recipe</h2>
+  <form class="edit-recipe-form">
+    <div>
+      <label for="edit-title">Edit Recipe Title:</label>
+      <input name="edit-title" type="text" value="{{recipe.title}}" />
+    </div>
+
+     <div>
+      <label for="edit-ingredients">Edit Ingredients:</label>
+      <textarea name="edit-ingredients" type="text" value="{{recipe.ingredients}}"></textarea>
+    </div>
+    <div>
+      <label for="edit-direction">Edit Direction</label>
+      <textarea name="edit-direction" type="text" value="{{recipe.direction}}"></textarea>
+    </div>
+    <div>
+      <label for="edit-photo">Edit Photo</label>
+      <input name="edit-photo" type="text" value="{{recipe.photo_path}}" />
+    </div>
+    <div>
+      <a href="/recipe/{{recipe.id}}">{{recipe.ratings.length}} {{format_plural "rating" recipe.ratings.length}}</a>
+    </div>
+    <button type="submit">Update Recipe</button>
+    <button type="button" class="delete-recipe-btn">Delete Recipe</button>
+  </form>
+</article>
+{{!-- <form class="rating-form">
+  <div>
+    <textarea name="rating-body"></textarea>
+  </div>
+
+  <div>
+    <button type="submit">add comment</button>
+  </div>
+</form> --}}
+{{> ratings recipe.ratings}}
+
+{{!-- {{#if loggedIn}} --}}
+<script src="/javascript/edit-recipe.js"></script>
+<script src="/javascript/delete-recipe.js"></script>
+<script src="/javascript/ratingHander.js"></script>
+{{!-- {{/if}} --}}

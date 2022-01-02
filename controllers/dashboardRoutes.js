@@ -5,7 +5,7 @@ const withAuth = require('../utils/auth');
 router.get('/', withAuth, (req, res) => { //get all recipe for dashboard
     Recipe.findAll({
         where: { user_id: req.session.user_id },
-        attributes: ['id', 'title', 'created_at'],
+        attributes: ['id', 'title', 'photo_path', 'created_at'],
         include: [{ //include its associated Rating
                 model: Rating,
                 attributes: ['id', 'rating_comment', 'rating_score'],
@@ -20,8 +20,8 @@ router.get('/', withAuth, (req, res) => { //get all recipe for dashboard
 });
 
 router.get('/edit/:id', withAuth, (req, res) => {
-    Post.findByPk(req.params.id, {
-        attributes: ['id', 'title', 'created_at'],
+    Recipe.findByPk(req.params.id, {
+        attributes: ['id', 'title', 'photo_path', 'created_at'],
         include: [{ //include its associated Rating
                 model: Rating,
                 attributes: ['id', 'rating_comment', 'rating_score'],
