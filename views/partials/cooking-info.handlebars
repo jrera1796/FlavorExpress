@@ -1,0 +1,26 @@
+<article class="recipe">
+  <div class="recipe-info">
+    <div class="card">
+      <div class="card-image">
+        <figure class="image is-128x128" >
+          <img src="/images/bananaNutBread.jpg" class="center" width="100" height="100" alt="Placeholder image">
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="media">
+          <div class="media-content">
+            <p class="title is-4">{{title}}</p>
+            <p class="title is-4">{{format_list ingredients}}</p>
+            <p class="title is-4">{{format_list direction}}</p>
+            <p class="subtitle is-6">Recipe by: {{user.username}}</p>
+          </div>
+        </div>
+        <div class="content">
+          <a href="/recipe/{{id}}">{{rating.length}} {{format_plural "Check out Review" rating.length}}</a>
+          <br>
+          <time>{{format_date created_at}}</time>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>

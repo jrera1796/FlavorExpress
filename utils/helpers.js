@@ -9,5 +9,49 @@ module.exports = {
             return `${word}s`;
         }
         return word;
+    },
+    format_list: strArray => {
+        for (let i = 0; i < strArray.length; i++) {
+            return strArray.split('\n')[i];
+        }
+        // let i = 0;
+        // while (i < strArray.length) {
+        //     return strArray.split('\n')[i];
+        // }
+        //return strArray.replace('\n', 'yes');
+        //return strArray.split('\n');
+        // for (let i = 0; i < strArray.length; i++) {
+        //     return strArray.replace('\n', 'yes');
+        // }
+        //return strArray;
+        // for (let i = 0; i < strArray.length; i++) {
+        //     return (strArray.split('\n')[i] + '\r\n');
+        // }
+        // let tempStr = strArray.split('\n');
+        // let returnVar = '';
+        // for (let i = 0; i < tempStr.length; i++) {
+        //     returnVar += tempStr[i] + console.log('\n\n');
+        // }
+        // return returnVar;
+
+
+
+        //return strArray.split('|')
+        // let tempStr = strArray.split('\n');
+        // tempStr.forEach(function(element) {
+        //         return element;
+        //     })
+
+
+        // for (let i = 0; i < tempStr.length; i++) {
+        //     return tempStr[i];
+        // }
+        // let newTemp = strArray.split('\n');
+        // let newStuff = '';
+        // for (let i = 0; i < newTemp.length; i++) {
+        //     var thing = document.createElement('p');
+        //     newStuff += newTemp[i] + thing;
+        // }
+        // return newStuff;
     }
 }
