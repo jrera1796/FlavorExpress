@@ -1,37 +1,52 @@
-<section>
-  <h2>Create New Recipe</h2>
-   <form class="new-recipe-form">
-    <div>
-      <label for="new-title">Title</label>
-      <input type="text" id="new-title" name="new-title" />
-    </div>
-    <div>
-      <label for="new-ingredients">Ingredients</label>
-      <textarea id="new-ingredients" name="new-ingredients"></textarea>
-    </div>
-    <div>
-      <label for="new-direction">Direction</label>
-      <textarea id="new-direction" name="new-direction"></textarea>
-    </div>
-    <div>
-      <label for="new-photo">Upload Photo</label>
-      <input type="text" id="new-photo" name="new-photo" />
-    </div>
-    <button type="submit" class="btn">Create</button>
-  </form>
-</section>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <script src="https://kit.fontawesome.com/1e89e92bcf.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>My Dashboard</title>
+</head>
 
-{{#if recipes.length}}
-<section>
-  <h2>Your Recipes</h2>
-  <ol>
-    {{#each recipes as |recipe|}}
-    <li>
-      {{> recipe-info recipe}}<a href="/dashboard/edit/{{recipe.id}}" class="edit-link">Edit Recipe</a>
-    </li>
-    {{/each}}
-  </ol>
-</section>
-{{/if}}
+<sectionis class="columns">
+  <section class="column">
+    <section class="column has-background-primary">
+    <h2><strong>Create New Recipe</strong></h2>
+    <form class="new-recipe-form">
+      <div>
+        <label for="new-title">Title</label>
+        <input type="text" id="new-title" name="new-title" />
+      </div>
+      <div>
+        <label for="new-ingredients">Ingredients</label>
+        <textarea id="new-ingredients" name="new-ingredients"></textarea>
+      </div>
+      <div>
+        <label for="new-direction">Direction</label>
+        <textarea id="new-direction" name="new-direction"></textarea>
+      </div>
+      <div>
+        <label for="new-photo">Upload Photo</label>
+        <input type="text" id="new-photo" name="new-photo" />
+      </div>
+      <button type="submit" class="btn">Create</button>
+    </form>
+ 
+    {{#if recipes.length}}
+    <section>
+      <h2>Your Recipes</h2>
+      <ol>
+        {{#each recipes as |recipe|}}
+        <li>
+          {{> recipe-info recipe}}<a href="/dashboard/edit/{{recipe.id}}" class="edit-link">Edit Recipe</a>
+        </li>
+        {{/each}}
+      </ol>
+    </section>
+    {{/if}}
+    </section>
+  </section>
+</sectionis>
 
 <script src="/javascript/add-recipe.js"></script>
+
+  
