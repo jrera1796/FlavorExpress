@@ -2,19 +2,19 @@
   {{#each this}}
   <section class="rating">
     <div class="meta" style="inline-flex">
-      {{user.username}} on {{created_at}}
+      {{user.username}} on {{format_date created_at}}
+
       {{#if rating_score.value}}
       {{#each rating_score.value}}
       <span class="fa fa-cookie-bite"></span>
       {{/each}}
-      {{/if}}
       {{else}}
       <span class="fa fa-cookie"></span>
       <span class="fa fa-cookie"></span>
       <span class="fa fa-cookie"></span>
       <span class="fa fa-cookie"></span>
       <span class="fa fa-cookie"></span>
-      {{/else}}
+      {{/if}}
     </div>
     <div class="text">
       {{rating_comment}}
