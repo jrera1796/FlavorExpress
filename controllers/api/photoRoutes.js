@@ -4,12 +4,13 @@ const aws = require('aws-sdk');
 const multer = require('multer');
 const multerS3 = require('multer-s3');
 require('dotenv').config();
-
+const uuid = require('uuid');
+const path = require('path')
 // Configuring the AWS environment
 aws.config.update({
   accessKeyId: process.env.AWS_ACCESS_KEY,
   secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
-  });
+});
 
 //S3 Object to interface with s3 service
 const s3 = new aws.S3({ apiVersion: '2006-03-01' })
@@ -27,17 +28,24 @@ const upload = multer({
     },
     //Filename saved as uuid + extension name
     key: (req, file, cb) => {
-      
+
       //File name saved as orignal
       const { originalname } = file;
-      cb(null, originalname);
+      
 
+      const ext = path.extname(file.originalname);
+      const str = `${uuid.v4()}${ext}`
+      
+      cb(null, str);
+      // cb(null, originalname);
     }
   })
 })
 
+
 router.post('/single', upload.single('recipe_pic'), (req, res) => {
-  return res.json({ status: 'OK-AWS' });
+  
+  return res.json({ status: 'OK-AWS', pathname: req.file.key });
 });
 
 router.post('/multiple', upload.array('recipe_pic'), (req, res) => {
