@@ -11,9 +11,26 @@ module.exports = {
         return word;
     },
     format_list: strArray => {
-        for (let i = 0; i < strArray.length; i++) {
-            return strArray.split('\n')[i];
+
+        let newString = [];
+        let tempArry = strArray.split('\n');
+        for (let i = 0; i < tempArry.length; i++) {
+            newString[i] = strArray.split('\n');
         }
+        return newString;
+        // let tempStr = strArray.split('\n');
+        // let counter = 0;
+        // for (let i = 0; i < tempStr.length; i++) {
+        //     if (i === counter) {
+        //         return tempStr[i] + counter;
+        //     }
+        //     counter++;
+        // }
+        // for (let i = 0; i < strArray.length; i++) {
+        //     return strArray.split('\n')[i];
+        // }
+
+
         // let i = 0;
         // while (i < strArray.length) {
         //     return strArray.split('\n')[i];

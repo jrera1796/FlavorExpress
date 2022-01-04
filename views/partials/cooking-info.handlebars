@@ -10,7 +10,7 @@
         <div class="media">
           <div class="media-content">
             <p class="title is-4">{{title}}</p>
-            <p class="title is-4">{{format_list ingredients}}</p>
+            <p class="title is-4">{{#each ingredients}} <li> {{this}} </li> {{/each}}</p>
             <p class="title is-4">{{format_list direction}}</p>
             <p class="subtitle is-6">Recipe by: {{user.username}}</p>
           </div>
