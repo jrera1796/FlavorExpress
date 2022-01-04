@@ -49,17 +49,10 @@
        </article>
    </div> --}}
 
-
+{{#if recipes.length}}
 <div class="generate-recipes has-background-primary">
-  {{#if recipes.length}}
-  <section>
-    <ol>
-      {{#each recipes as |recipe|}}
-      <li>
-        {{> recipe-info recipe}}
-      </li>
-      {{/each}}
-    </ol>
-  </section>
-  {{/if}}
-</div> --}}
+    {{#each recipes as |recipe|}}
+      {{> recipe-info recipe}}
+     {{/each}}
+</div>
+{{/if}}

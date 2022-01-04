@@ -19,7 +19,6 @@ async function ratingHandler(event) {
             body: JSON.stringify({
                 rating_comment,
                 rating_score,
-                user_id,
                 recipe_id
 
             }),
