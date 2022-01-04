@@ -11,10 +11,10 @@ async function newFormHandler(event) {
         method: 'POST',
         body: formData,
     })
-    
+
     const data = await upload.json()
     const photo_path = data.pathname
-    
+
     const response = await fetch(`/api/recipes`, {
         method: 'POST',
         body: JSON.stringify({ title, ingredients, direction, photo_path }),
