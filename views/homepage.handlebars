@@ -1,49 +1,79 @@
-
+<div>
+  <section class="container">
+    <p class="has-text-link is-size-4 mt-3 ml-4">
+      Welcome to Flavor Express!
+      If you would like to upload your recipes,
+      please join our community by signning up.
+      You will also be able to leave comments.
+    </p>
+  </section>
+</div>
+<main>
+  <div>
+    <section class="parallax bg-image">
       <div>
-        <section class="container">
-          <p class="has-text-link is-size-4 mt-3 ml-4">
-            Welcome to Flavor Express! 
+        <p class="block text has-text-black is-size-3 mt-3 ml-4 is-important">
+          <strong>Welcome to Flavor Express!
             If you would like to upload your recipes,
             please join our community by signning up.
-            You will also be able to leave comments.
-          </p>
-        </section>
-      </div>
-
-        {{#if loggedIn}}
-        <section class="container">
-          <h3 class="has-text-link is-size-2 mt-3 ml-4">
-              Already a member?
-              <button type="submit" class="button is-medium is-primary">Login here</button>
-          </h3>         
-        </section>
-        
-        {{/if}}
-        
-        <section  class="hero">
-            <h4 class=" is-size-1">Pictures</h4>
-            <h4 class=" is-size-1">Pictures</h4>
-            <h4 class=" is-size-1">Pictures</h4>
-            <h4 class=" is-size-1">Pictures</h4>
-            <h4 class=" is-size-1">Pictures</h4>
-            <h4 class=" is-size-1">Pictures</h4>
-            <h4 class=" is-size-1">Pictures</h4>
-            <h4 class=" is-size-1">Pictures</h4>
-            <h4 class=" is-size-1">Pictures</h4>
-        </section>
-
-
-    <footer class="footer has-background-primary">
-      <div class="content has-text-centered is-size-5">
-        <p>
-          Created by <a href="https://github.com/kcheykim">Kosal Cheykim</a>,
-          <a href="https://github.com/mockcomic">Kurtis Hight</a>,
-          <a href="https://github.com/jrera1796">Jose Rivera</a>,
-          <a href="https://github.com/ricky0320">Ching Leung</a>.
-          The source code is licensed
-          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>
+            You will also be able to leave comments.</strong>
         </p>
       </div>
-    </footer>
+    </section>
+  </div>
+  {{!-- {{#if loggedIn}}
+{{else}}
+<section class="container">
+  <h3 class="has-text-link is-size-2 mt-3 ml-4">
+    Already a member?
+    <a href="/login" class="button">
+      <span>
+        <i class="fas fa-sign-in-alt mr-1"></i>
+      </span>Login here
+    </a>
+  </h3>
+</section>
+{{/if}} --}}
 
+  {{#if loggedIn}}
+  {{else}}
+  <section>
+    <div class="parallax-2 bg-image">
+      <h3 class="has-text-link is-size-2 mt-3 ml-4">
+        Already a member?
+        <a href="/login" class="button is-medium is-outlined is-primary">
+          <span>
+            <i class="fas fa-sign-in-alt mr-1"></i>
+          </span>Login here
+        </a>
+      </h3>
+    </div>
+  </section>
+  {{/if}}
 
+  <section>
+    <div class="parallax-3 bg-image">
+      <h3 class="column has-text-primary is-size-2 ml-4">
+        Explore more flavors!
+      </h3>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="parallax-4 bg-image">
+      <h3 class="column has-text-link is-size-2 ml-4">
+        Yummy!
+      </h3>
+    </div>
+  </section>
+
+  <section>
+    <div class="parallax-5 bg-image">
+      <h3 class="column has-text-primary is-size-2 ml-4">
+        Hungry already?
+      </h3>
+    </div>
+  </section>
+
+</main>
