@@ -51,7 +51,7 @@ router.put('/:id', withAuth, (req, res) => {
         title: req.body.title,
         ingredients: req.body.ingredients,
         direction: req.body.direction,
-        //upload new photo options here or path
+        photo_path: req.body.photo_path
     }, {
         where: { id: req.params.id }
     }).then(recipeData => {
