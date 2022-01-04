@@ -4,17 +4,33 @@
     <div class="meta" style="inline-flex">
       {{user.username}} on {{format_date created_at}}
 
-      {{#if rating_score.value}}
-      {{#each rating_score.value}}
-      <span class="fa fa-cookie-bite"></span>
-      {{/each}}
-      {{else}}
-      <span class="fa fa-cookie"></span>
-      <span class="fa fa-cookie"></span>
-      <span class="fa fa-cookie"></span>
-      <span class="fa fa-cookie"></span>
-      <span class="fa fa-cookie"></span>
-      {{/if}}
+      {{#ifEquals rating_score 1}}
+      <span class="fa fa-cookie-bite">*</span>
+      {{/ifEquals}}
+
+      {{#ifEquals rating_score 2}}
+      <span class="fa fa-cookie-bite">*</span>
+      <span class="fa fa-cookie-bite">*</span>
+      {{/ifEquals}}
+      {{#ifEquals rating_score 3}}
+      <span class="fa fa-cookie-bite">*</span>
+      <span class="fa fa-cookie-bite">*</span>
+      <span class="fa fa-cookie-bite">*</span>
+      {{/ifEquals}}
+      {{#ifEquals rating_score 4}}
+      <span class="fa fa-cookie-bite">*</span>
+      <span class="fa fa-cookie-bite">*</span>
+      <span class="fa fa-cookie-bite">*</span>
+      <span class="fa fa-cookie-bite">*</span>
+      {{/ifEquals}}
+      {{#ifEquals rating_score 5}}
+      <span class="fa fa-cookie-bite">*</span>
+      <span class="fa fa-cookie-bite">*</span>
+      <span class="fa fa-cookie-bite">*</span>
+      <span class="fa fa-cookie-bite">*</span>
+      <span class="fa fa-cookie-bite">*</span>
+      {{/ifEquals}}
+
     </div>
     <div class="text">
       {{rating_comment}}
