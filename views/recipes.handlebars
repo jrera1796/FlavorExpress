@@ -1,0 +1,65 @@
+{{!-- 
+<div class="generate-recipes has-background-primary">
+    <article class="recipe-card">
+     <img src="./public/img/avocado.jpg" width="150" height="150" alt="" />
+     <div class="recipe-wrapper">
+       <h3 class="recipe-name">Avocade</h3>
+       <p class="recipe-info">Slice and add pepper</p>
+     </div>
+    </article>
+
+    <article class="recipe-card">
+        <img src="./public/img/avocado.jpg" width="150" height="150" alt="" />
+        <div class="recipe-wrapper">
+          <h3 class="recipe-name">Avocade</h3>
+          <p class="recipe-info">Slice and add pepper</p>
+        </div>
+       </article>
+
+       <article class="recipe-card">
+        <img src="./public/img/avocado.jpg" width="150" height="150" alt="" />
+        <div class="recipe-wrapper">
+          <h3 class="recipe-name">Avocade</h3>
+          <p class="recipe-info">Slice and add pepper</p>
+        </div>
+       </article>
+
+       <article class="recipe-card">
+        <img src="./public/img/avocado.jpg" width="150" height="150" alt="" />
+        <div class="recipe-wrapper">
+          <h3 class="recipe-name">Avocade</h3>
+          <p class="recipe-info">Slice and add pepper</p>
+        </div>
+       </article>
+
+       <article class="recipe-card">
+        <img src="./public/img/avocado.jpg" width="150" height="150" alt="" />
+        <div class="recipe-wrapper">
+          <h3 class="recipe-name">Avocade</h3>
+          <p class="recipe-info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium nesciunt a impedit ea debitis suscipit magnam vel, itaque error saepe ducimus, quas fuga quae excepturi delectus voluptates quidem in rerum!</p>
+        </div>
+       </article>
+   
+       <article class="recipe-card">
+        <img src="./public/img/avocado.jpg" width="150" height="150" alt="" />
+        <div class="recipe-wrapper">
+          <h3 class="recipe-name">Avocade</h3>
+          <p class="recipe-info">Slice and add pepper. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt consectetur fugiat delectus, dicta quibusdam dolore totam explicabo consequuntur ex corrupti tempora ipsam molestiae in quam earum error velit ad nulla!</p>
+        </div>
+       </article>
+   </div> --}}
+
+
+<div class="generate-recipes has-background-primary">
+  {{#if recipes.length}}
+  <section>
+    <ol>
+      {{#each recipes as |recipe|}}
+      <li>
+        {{> recipe-info recipe}}
+      </li>
+      {{/each}}
+    </ol>
+  </section>
+  {{/if}}
+</div> --}}
