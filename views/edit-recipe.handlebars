@@ -17,13 +17,13 @@
     </div>
     <div>
       <label for="edit-photo">Edit Photo</label>
-      <input name="edit-photo" type="text" value="{{recipe.photo_path}}" />
+      <input type="file" name="recipe_pic" value="{{recipe.photo_path}}" />
     </div>
     <div>
       <a href="/recipe/{{recipe.id}}">{{recipe.ratings.length}} {{format_plural "rating" recipe.ratings.length}}</a>
     </div>
     <button type="submit">Update Recipe</button>
-    <button type="button" class="delete-recipe-btn">Delete Recipe</button>
+    <button type="submit" class="delete-recipe-btn">Delete Recipe</button>
   </form>
 </article>
 {{!-- <form class="rating-form">
@@ -39,5 +39,4 @@
 {{!-- {{#if loggedIn}} --}}
 <script src="/javascript/edit-recipe.js"></script>
 <script src="/javascript/delete-recipe.js"></script>
-<script src="/javascript/ratingHander.js"></script>
 {{!-- {{/if}} --}}

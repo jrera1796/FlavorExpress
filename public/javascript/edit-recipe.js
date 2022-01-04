@@ -3,7 +3,9 @@ async function editFormHandler(event) {
     const title = document.querySelector('input[name="edit-title"]').value.trim();
     const ingredients = document.querySelector('textarea[name="edit-ingredients"]').value.trim();
     const direction = document.querySelector('textarea[name="edit-direction"]').value.trim();
-    const photo_path = document.querySelector('input[name="edit-photo"]').value;
+    const photo_path = document.querySelector('input[name="recipe_pic"]').value.split('\\')[2];
+    const fileField = document.querySelector('input[type="file"');
+    const formData = new FormData();
     const id = window.location.toString().split('/')[window.location.toString().split('/').length - 1];
 
     const response = await fetch(`/api/recipes/${id}`, {
@@ -11,6 +13,12 @@ async function editFormHandler(event) {
         body: JSON.stringify({ title, ingredients, direction, photo_path }),
         headers: { 'Content-Type': 'application/json' }
     });
+
+    formData.append('recipe_pic', fileField.files[0]);
+    await fetch('/api/upload/single', {
+        method: 'POST',
+        body: formData,
+    })
 
     if (response.ok) {
         document.location.replace('/dashboard');

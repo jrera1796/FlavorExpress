@@ -66,6 +66,7 @@ router.delete('/:id', withAuth, (req, res) => { //remove a specific recipe
     Recipe.destroy({ //delete recipe by its `id`
         where: { id: req.params.id }
     }).then(recipeData => {
+        console.log('delete success');
         if (!recipeData) {
             res.status(404).json({ message: 'Recipe Not Found' });
             return;
