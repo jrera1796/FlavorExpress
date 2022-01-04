@@ -1,17 +1,20 @@
+{{log format_list direction}}
+
+
 <article class="recipe">
   <div class="recipe-info">
     <div class="card">
       <div class="card-image">
         <figure class="image is-128x128" >
-          <img src="/images/bananaNutBread.jpg" class="center" width="100" height="100" alt="Placeholder image">
+          <img src="https://pj2-test-bucket.s3.us-west-1.amazonaws.com/{{photo_path}}" class="center" width="100" height="100" alt="Placeholder image">
         </figure>
       </div>
       <div class="card-content">
         <div class="media">
           <div class="media-content">
             <p class="title is-4">{{title}}</p>
-            <p class="title is-4">{{#each ingredients}} <li> {{this}} </li> {{/each}}</p>
-            <p class="title is-4">{{format_list direction}}</p>
+            <p class="title is-4">{{#each ingredients}}{{this}}<br />{{/each}}</p>
+            <p class="title is-4">{{#each direction}}{{this}}<br />{{/each}}</p>
             <p class="subtitle is-6">Recipe by: {{user.username}}</p>
           </div>
         </div>

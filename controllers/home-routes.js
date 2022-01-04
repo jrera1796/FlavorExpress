@@ -34,6 +34,9 @@ router.get('/recipe/:id', (req, res) => { //get single recipe
             return;
         }
         const recipe = recipeData.get({ plain: true });
+
+        recipe.ingredients = recipe.ingredients.split('\n');
+        recipe.direction = recipe.direction.split('\n');
         res.render('single-recipe', { recipe, loggedIn: req.session.loggedIn });
     }).catch(err => { res.status(500).json(err); });
 });
