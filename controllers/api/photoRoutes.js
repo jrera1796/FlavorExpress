@@ -29,22 +29,17 @@ const upload = multer({
     //Filename saved as uuid + extension name
     key: (req, file, cb) => {
 
-      //File name saved as orignal
+      //Save as UUID plus extension
       const { originalname } = file;
-      
-
       const ext = path.extname(file.originalname);
       const str = `${uuid.v4()}${ext}`
-      
       cb(null, str);
-      // cb(null, originalname);
+      
     }
   })
 })
 
-
 router.post('/single', upload.single('recipe_pic'), (req, res) => {
-  
   return res.json({ status: 'OK-AWS', pathname: req.file.key });
 });
 
