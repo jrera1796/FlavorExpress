@@ -10,7 +10,7 @@ router.get('/', (req, res) => { //recipe endpoints
                     attributes: ['id', 'rating_comment', 'rating_score'],
                     include: { model: User, attributes: ['username'] }
                 }, //include its associated User
-                { model: User, attributes: ['username'] }
+                { model: User, attributes: ['username'] },
             ]
         }).then(recipeData => res.json(recipeData))
         .catch(err => { res.status(500).json(err); });

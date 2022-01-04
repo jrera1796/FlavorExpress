@@ -7,7 +7,7 @@ const {
 
 router.get('/recipes', (req, res) => { //get all recipe for recipes
     Recipe.findAll({ //find all recipes
-        attributes: ['id', 'photo_path', 'created_at'],
+        attributes: ['id', 'title', 'photo_path'],
         include: [{ //include its associated Rating
                 model: Rating,
                 attributes: ['id', 'rating_comment', 'rating_score'],
@@ -16,10 +16,8 @@ router.get('/recipes', (req, res) => { //get all recipe for recipes
                     attributes: ['username']
                 }
             }, //include its associated User
-            {
-                model: User,
-                attributes: ['username']
-            }
+            { model: User, attributes: ['username'] },
+            { model: Rating, attributes: ['rating_comment'] }
         ]
     }).then(recipeData => {
         const recipes = recipeData.map(recipe => recipe.get({
