@@ -1,10 +1,10 @@
 async function ratingHandler(event) {
     event.preventDefault();
     var c1 = document.getElementById("c1");
-    var chkbox2 = document.getElementById("c2");
-    var chkbox3 = document.getElementById("c3")
-    var chkbox1 = document.getElementById("c4");
-    var chkbox2 = document.getElementById("c5");
+    var c2 = document.getElementById("c2");
+    var c3 = document.getElementById("c3")
+    var c4 = document.getElementById("c4");
+    var c5 = document.getElementById("c5");
     
     const rating_comment = document.querySelector('textarea[name="rating-body"]').value.trim();
     const rating_score = document.querySelector('input[type="checkbox"').value;
