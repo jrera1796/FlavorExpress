@@ -22,7 +22,7 @@
     <nav class="subtitle tabs is-boxed level-right columns is-5">
       <ul class="is-active">
         <li>
-          <a href="/" class="">
+          <a href="/recipes" class="">
             <span style="font: size 2x;">
               <i class="fas fa-utensils mr-1"></i>
             </span>Recipes
@@ -59,10 +59,23 @@
       {{{body}}}
     </div>
   </main>
-
   {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
   {{/if}}
 </body>
+
+<footer class="footer has-background-primary has-text-centered">
+  <div class="content has-text-centered is-size-5">
+    <p>
+      Created by <a href="https://github.com/kcheykim">Kosal Cheykim</a>,
+      <a href="https://github.com/mockcomic">Kurtis Hight</a>,
+      <a href="https://github.com/jrera1796">Jose Rivera</a>,
+      <a href="https://github.com/ricky0320">Ching Leung</a>.
+      The source code is licensed
+      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>
+    </p>
+  </div>
+  <a onClick="window.scrollTo(0, 0);"><strong>Back to Top</strong></a>
+</footer>
 
 </html>
