@@ -3,20 +3,20 @@
   <form class="edit-recipe-form">
     <div>
       <label for="edit-title">Edit Recipe Title:</label>
-      <input name="new-title" type="text" value="{{recipe.title}}" />
+      <input name="edit-title" type="text" value="{{recipe.title}}" />
     </div>
 
-     <div>
+    <div>
       <text for="edit-ingredients">Edit Ingredients:</label>
-      <textarea name="new-ingredients" type="text">{{recipe.ingredients}}</textarea>
+        <textarea name="edit-ingredients" type="text">{{recipe.ingredients}}</textarea>
     </div>
     <div>
       <label for="edit-direction">Edit Direction</label>
-      <textarea name="new-direction" type="text">{{recipe.direction}}</textarea>
+      <textarea name="edit-direction" type="text">{{recipe.direction}}</textarea>
     </div>
     <div>
-      <label for="edit-hint">Edit Direction</label>
-      <textarea name="new-hint" type="text">{{recipe.express_hint}}</textarea>
+      <label for="edit-hint">Edit Hint</label>
+      <textarea name="edit-hint" type="text">{{recipe.express_hint}}</textarea>
     </div>
     <div>
       <label for="edit-photo">Edit Photo</label>
@@ -25,20 +25,10 @@
     <div>
       <a href="/recipe/{{recipe.id}}">{{recipe.ratings.length}} {{format_plural "rating" recipe.ratings.length}}</a>
     </div>
-    <button type="submit" class="edit-recipe-btn">Update Recipe</button>
-    <button type="submit" class="delete-recipe-btn">Delete Recipe</button>
+    <button type="submit" id="edit-recipe-btn">Update Recipe</button>
+    <button type="submit" id="delete-recipe-btn">Delete Recipe</button>
   </form>
 </article>
-{{!-- <form class="rating-form">
-  <div>
-    <textarea name="rating-body"></textarea>
-  </div>
-  <div>
-    <button type="submit">add comment</button>
-  </div>
-</form> --}}
-{{> ratings recipe.ratings}}
-
 {{#if loggedIn}}
 <script src="/javascript/edit-recipe.js"></script>
 <script src="/javascript/delete-recipe.js"></script>

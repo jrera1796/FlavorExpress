@@ -1,6 +1,6 @@
 async function ratingHandler(event) {
     event.preventDefault();
-    
+    var rating_score = 0
     if (document.getElementById('c1').checked){rating_score = document.getElementById('c1').value}
     if (document.getElementById('c2').checked){rating_score = document.getElementById('c2').value}
     if (document.getElementById('c3').checked){rating_score = document.getElementById('c3').value}

@@ -52,13 +52,13 @@ Step 2
     {{#if recipes.length}}
     <section>
       <h2 class = "subtitle is-2">Your Recipes</h2>
-      <ol>
+      <ul>
         {{#each recipes as |recipe|}}
         <li>
           {{> recipe-info recipe}}<a href="/dashboard/edit/{{recipe.id}}" class="button">Edit Recipe</a>
         </li>
         {{/each}}
-      </ol>
+      </ul>
     </section>
     {{/if}}
     </section>
