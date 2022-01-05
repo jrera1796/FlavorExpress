@@ -13,8 +13,4 @@ async function deleteFormHandler(event) {
     }
 }
 
-<<<<<<< Updated upstream:public/javascript/delete-recipe.js
 document.querySelector('.delete-recipe-btn').addEventListener('click', deleteFormHandler);
-=======
-document.getElementById('delete-recipe-btn').addEventListener('click', deleteFormHandler);
->>>>>>> Stashed changes:public/javascript/delete-recipes.js

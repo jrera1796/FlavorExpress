@@ -1,16 +1,9 @@
 async function editFormHandler(event) {
     event.preventDefault();
-<<<<<<< Updated upstream
     const title = document.querySelector('input[name="new-title"]').value;
     const ingredients = document.querySelector('textarea[name="new-ingredients"]').value.trim();
     const direction = document.querySelector('textarea[name="new-direction"]').value.trim();
     const fileField = document.querySelector('input[type="file"]');
-=======
-    const title = document.querySelector('input[name="edit-title"]').value.trim();
-    const ingredients = document.querySelector('input[name="edit-ingredients"]').value.trim();
-    const direction = document.querySelector('input[name="edit-direction"]').value.trim();
-    const fileField = document.querySelector('input[type="file"');
->>>>>>> Stashed changes
     const formData = new FormData();
     const id = window.location.toString().split('/')[window.location.toString().split('/').length - 1];
 
