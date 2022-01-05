@@ -1,7 +1,7 @@
-<div class="ratings">
+<div class="block">
   {{#each this}}
-  <section class="rating">
-    <div class="meta" style="inline-flex">
+  <div class="block">
+    <div class="box" style="inline-flex">
       {{user.username}} on {{format_date created_at}}
 
       {{#ifEquals rating_score 1}}
@@ -30,11 +30,11 @@
       <span class="fa fa-cookie-bite"></span>
       <span class="fa fa-cookie-bite"></span>
       {{/ifEquals}}
-
-    </div>
-    <div class="text">
+ <div class="text">
       {{rating_comment}}
     </div>
+    </div>
+   
   </section>
   {{/each}}
 </div>
