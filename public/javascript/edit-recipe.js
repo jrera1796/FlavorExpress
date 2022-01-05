@@ -1,8 +1,8 @@
 async function editFormHandler(event) {
     event.preventDefault();
-    const title = document.querySelector('input[name="new-title"]').value.trim();
-    const ingredients = document.querySelector('input[name="new-ingredients"]').value.trim();
-    const direction = document.querySelector('input[name="new-direction"]').value.trim();
+    const title = document.querySelector('input[name="new-title"]').value;
+    const ingredients = document.getElementById('new-ingredients').value;
+    const direction = document.getElementById('new-direction').value;
     const fileField = document.querySelector('input[type="file"]');
     const formData = new FormData();
     const id = window.location.toString().split('/')[window.location.toString().split('/').length - 1];
