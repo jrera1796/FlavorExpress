@@ -7,12 +7,21 @@
     </div>
 
      <div>
+<<<<<<< Updated upstream
       <text for="edit-ingredients">Edit Ingredients:</label>
       <textarea name="new-ingredients" type="text">{{recipe.ingredients}}</textarea>
     </div>
     <div>
       <label for="edit-direction">Edit Direction</label>
       <textarea name="new-direction" type="text">{{recipe.direction}}</textarea>
+=======
+      <label for="edit-ingredients">Edit Ingredients:</label>
+      <input name="edit-ingredients" type="text" value="{{recipe.ingredients}}"></input>
+    </div>
+    <div>
+      <label for="edit-direction">Edit Direction</label>
+      <input name="edit-direction" type="text" value="{{recipe.direction}}"></input>
+>>>>>>> Stashed changes
     </div>
     <div>
       <label for="edit-photo">Edit Photo</label>
@@ -21,8 +30,13 @@
     <div>
       <a href="/recipe/{{recipe.id}}">{{recipe.ratings.length}} {{format_plural "rating" recipe.ratings.length}}</a>
     </div>
+<<<<<<< Updated upstream
     <button type="submit" class="edit-recipe-btn">Update Recipe</button>
     <button type="submit" class="delete-recipe-btn">Delete Recipe</button>
+=======
+    <button type="submit">Update Recipe</button>
+    <button type="submit" id="delete-recipe-btn">Delete Recipe</button>
+>>>>>>> Stashed changes
   </form>
 </article>
 {{!-- <form class="rating-form">
@@ -37,5 +51,10 @@
 
 {{#if loggedIn}}
 <script src="/javascript/edit-recipe.js"></script>
+<<<<<<< Updated upstream
 <script src="/javascript/delete-recipe.js"></script>
 {{/if}}
+=======
+<script src="/javascript/delete-recipes.js"></script>
+{{!-- {{/if}} --}}
+>>>>>>> Stashed changes
