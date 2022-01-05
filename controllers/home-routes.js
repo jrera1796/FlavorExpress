@@ -44,7 +44,7 @@ router.get('/recipe/:id', (req, res) => { //get single recipe
         attributes: ['id', 'title', 'ingredients', 'direction', 'photo_path', 'created_at'],
         include: [{ //include its associated Rating
                 model: Rating,
-                attributes: ['id', 'rating_comment', 'rating_score', 'recipe_id', 'user_id'],
+                attributes: ['id', 'rating_comment', 'rating_score', 'recipe_id', 'user_id', 'created_at'],
                 include: {
                     model: User,
                     attributes: ['username']

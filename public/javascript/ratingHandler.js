@@ -1,13 +1,14 @@
 async function ratingHandler(event) {
     event.preventDefault();
-    var c1 = document.getElementById("c1");
-    var c2 = document.getElementById("c2");
-    var c3 = document.getElementById("c3")
-    var c4 = document.getElementById("c4");
-    var c5 = document.getElementById("c5");
+    
+    if (document.getElementById('c1').checked){rating_score = document.getElementById('c1').value}
+    if (document.getElementById('c2').checked){rating_score = document.getElementById('c2').value}
+    if (document.getElementById('c3').checked){rating_score = document.getElementById('c3').value}
+    if (document.getElementById('c4').checked){rating_score = document.getElementById('c4').value}
+    if (document.getElementById('c5').checked){rating_score = document.getElementById('c5').value}
 
     const rating_comment = document.querySelector('textarea[name="rating-body"]').value.trim();
-    const rating_score = document.querySelector('input[type="checkbox"').value;
+    
     console.log(rating_score)
     const recipe_id = window.location.toString().split('/')[
         window.location.toString().split('/').length - 1

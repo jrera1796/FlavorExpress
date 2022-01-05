@@ -1,22 +1,7 @@
 {{> cooking-info recipe}}
 
 {{#if loggedIn}}
-<form class="rating-form">
-  <div><textarea name="rating-body"></textarea></div>
-  <div class="wrapper">
-    <input type="checkbox" id="c1" value="1"><label for="c1"></label>
-    <input type="checkbox" id="c2" value="2"><label for="c2"></label>
-    <input type="checkbox" id="c3" value="3"><label for="c3"></label>
-    <input type="checkbox" id="c4" value="4"><label for="c4"></label>
-    <input type="checkbox" id="c5" value="5"><label for="c5"></label>
-  </div>
-  <div><button type="submit">Rate It</button> </div>
-  <div name="user-id" style="display: none;">{{user.id}}</div>
-</form>
+{{> rating-form}}
 {{/if}}
 
 {{> ratings recipe.ratings}}
-
-{{#if loggedIn}}
-<script src="/javascript/ratingHandler.js"></script>
-{{/if}}

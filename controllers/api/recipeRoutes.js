@@ -4,10 +4,10 @@ const withAuth = require('../../utils/auth');
 
 router.get('/', (req, res) => { //recipe endpoints
     Recipe.findAll({ //find all recipes
-            attributes: ['id', 'title', 'photo_path', 'created_at'],
+            attributes: ['id', 'title', 'direction', 'photo_path', 'created_at'],
             include: [{ //include its associated Rating
                     model: Rating,
-                    attributes: ['id', 'rating_comment', 'rating_score'],
+                    attributes: ['id', 'rating_comment', 'rating_score',],
                     include: { model: User, attributes: ['username'] }
                 }, //include its associated User
                 { model: User, attributes: ['username'] },
@@ -21,7 +21,7 @@ router.get('/:id', (req, res) => { //get a specific recipe
         where: { id: req.params.id }, //find by its `id`
         include: [{ //include its associated Rating
                 model: Rating,
-                attributes: ['id', 'rating_comment', 'rating_score'],
+                attributes: ['id', 'rating_comment', 'rating_score', 'created_at'],
                 include: { model: User, attributes: ['username'] }
             }, //include its associated User
             { model: User, attributes: ['username'] }
