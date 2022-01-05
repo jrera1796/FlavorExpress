@@ -56,13 +56,8 @@ router.get('/edit/:id', withAuth, (req, res) => {
         ]
     }).then(recipeData => {
         if (recipeData) {
-            const recipe = recipeData.get({
-                plain: true
-            });
-            res.render('edit-recipe', {
-                recipe,
-                loggedIn: true
-            });
+            const recipe = recipeData.get({ plain: true });
+            res.render('edit-recipe', { recipe, loggedIn: true });
         } else {
             res.status(404).end();
         }
