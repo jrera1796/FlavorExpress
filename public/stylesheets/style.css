@@ -93,11 +93,6 @@ footer {
   .recipe-card p {
     font-size: 16px;
   }
-
-  .card{
-    display: flex;
-    justify-content:center;
-  }
   .rate {
     
     height: 46px;
