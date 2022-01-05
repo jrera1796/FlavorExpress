@@ -3,7 +3,7 @@ async function newFormHandler(event) {
     const title = document.querySelector('input[name="new-title"]').value;
     const ingredients = document.querySelector('textarea[name="new-ingredients"]').value.trim();
     const direction = document.querySelector('textarea[name="new-direction"]').value.trim();
-    const fileField = document.querySelector('input[type="file"');
+    const fileField = document.querySelector('input[type="file"]');
     const formData = new FormData();
 
     formData.append('recipe_pic', fileField.files[0]);

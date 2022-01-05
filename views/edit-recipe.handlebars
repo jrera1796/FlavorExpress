@@ -3,16 +3,16 @@
   <form class="edit-recipe-form">
     <div>
       <label for="edit-title">Edit Recipe Title:</label>
-      <input name="edit-title" type="text" value="{{recipe.title}}" />
+      <input name="new-title" type="text" value="{{recipe.title}}" />
     </div>
 
      <div>
       <label for="edit-ingredients">Edit Ingredients:</label>
-      <textarea name="edit-ingredients" type="text" value="{{recipe.ingredients}}"></textarea>
+      <textarea name="new-ingredients" type="text" value="{{{recipe.ingredients}}}"></textarea>
     </div>
     <div>
       <label for="edit-direction">Edit Direction</label>
-      <textarea name="edit-direction" type="text" value="{{recipe.direction}}"></textarea>
+      <textarea name="new-direction" type="text" value="{{recipe.direction}}"></textarea>
     </div>
     <div>
       <label for="edit-photo">Edit Photo</label>
@@ -21,7 +21,7 @@
     <div>
       <a href="/recipe/{{recipe.id}}">{{recipe.ratings.length}} {{format_plural "rating" recipe.ratings.length}}</a>
     </div>
-    <button type="submit">Update Recipe</button>
+    <button type="submit" class="edit-recipe-btn">Update Recipe</button>
     <button type="submit" class="delete-recipe-btn">Delete Recipe</button>
   </form>
 </article>
@@ -35,7 +35,7 @@
 </form> --}}
 {{> ratings recipe.ratings}}
 
-{{!-- {{#if loggedIn}} --}}
+{{#if loggedIn}}
 <script src="/javascript/edit-recipe.js"></script>
 <script src="/javascript/delete-recipe.js"></script>
-{{!-- {{/if}} --}}
+{{/if}}

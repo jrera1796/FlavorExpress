@@ -40,7 +40,7 @@ router.get('/', withAuth, (req, res) => { //get all recipe for dashboard
 
 router.get('/edit/:id', withAuth, (req, res) => {
     Recipe.findByPk(req.params.id, {
-        attributes: ['id', 'title', 'photo_path', 'created_at'],
+        attributes: ['id', 'title', 'ingredients', 'direction', 'photo_path', 'created_at'],
         include: [{ //include its associated Rating
                 model: Rating,
                 attributes: ['id', 'rating_comment', 'rating_score'],
