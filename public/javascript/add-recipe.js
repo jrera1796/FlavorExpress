@@ -1,8 +1,8 @@
 async function newFormHandler(event) {
     event.preventDefault();
     const title = document.querySelector('input[name="new-title"]').value;
-    const ingredients = document.querySelector('textarea[name="new-ingredients"]').value.trim();
-    const direction = document.querySelector('textarea[name="new-direction"]').value.trim();
+    const ingredients = document.querySelector('input[name="new-ingredients"]').value.trim();
+    const direction = document.querySelector('input[name="new-direction"]').value.trim();
     const fileField = document.querySelector('input[type="file"]');
     const formData = new FormData();
 

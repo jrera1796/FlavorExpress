@@ -15,11 +15,11 @@ Recipe.init({
         allowNull: false
     },
     ingredients: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(1000),
         allowNull: false
     },
     direction: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(1000),
         allowNull: false
     },
     photo_path: {
