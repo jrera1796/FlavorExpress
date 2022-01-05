@@ -68,13 +68,13 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    /* float: left; */
   }
   
   .recipe-card {
     margin: 20px;
-    background: var(--secondary-color);
-    color: var(--primary-color);
     flex: 2 0 33%;
+    max-width: 50%;
   }
   
   .recipe-card img {
@@ -96,6 +96,7 @@ footer {
 
   .card{
     display: flex;
+    justify-content:center;
   }
   .rate {
     
