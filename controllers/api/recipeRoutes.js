@@ -4,10 +4,10 @@ const withAuth = require('../../utils/auth');
 
 router.get('/', (req, res) => { //recipe endpoints
     Recipe.findAll({ //find all recipes
-            attributes: ['id', 'title', 'direction', 'photo_path', 'created_at'],
+            attributes: ['id', 'title', 'direction', 'express_hint', 'photo_path', 'created_at'],
             include: [{ //include its associated Rating
                     model: Rating,
-                    attributes: ['id', 'rating_comment', 'rating_score',],
+                    attributes: ['id', 'rating_comment', 'rating_score', ],
                     include: { model: User, attributes: ['username'] }
                 }, //include its associated User
                 { model: User, attributes: ['username'] },
@@ -40,6 +40,7 @@ router.post('/', withAuth, (req, res) => { //posting a new recipe
             title: req.body.title,
             ingredients: req.body.ingredients,
             direction: req.body.direction,
+            express_hint: req.body.express_hint,
             photo_path: req.body.photo_path,
             user_id: req.session.user_id
         }).then(recipeData => res.json(recipeData))
@@ -51,6 +52,7 @@ router.put('/:id', withAuth, (req, res) => {
         title: req.body.title,
         ingredients: req.body.ingredients,
         direction: req.body.direction,
+        express_hint: req.body.express_hint,
         photo_path: req.body.photo_path
     }, {
         where: { id: req.params.id }

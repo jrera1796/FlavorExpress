@@ -41,7 +41,7 @@ router.get('/recipe/:id', (req, res) => { //get single recipe
         where: {
             id: req.params.id
         }, //find by its `id`
-        attributes: ['id', 'title', 'ingredients', 'direction', 'photo_path', 'created_at'],
+        attributes: ['id', 'title', 'ingredients', 'direction', 'express_hint', 'photo_path', 'created_at'],
         include: [{ //include its associated Rating
                 model: Rating,
                 attributes: ['id', 'rating_comment', 'rating_score', 'recipe_id', 'user_id', 'created_at'],
@@ -66,6 +66,7 @@ router.get('/recipe/:id', (req, res) => { //get single recipe
 
         recipe.ingredients = recipe.ingredients.split('\n');
         recipe.direction = recipe.direction.split('\n');
+        recipe.express_hint = recipe.express_hint.split('\n');
         res.render('single-recipe', { recipe, loggedIn: req.session.loggedIn });
     }).catch(err => { res.status(500).json(err); });
 });

@@ -22,6 +22,10 @@ Recipe.init({
         type: DataTypes.STRING(1000),
         allowNull: false
     },
+    express_hint: {
+        type: DataTypes.STRING(1000),
+        allowNull: false
+    },
     photo_path: {
         type: DataTypes.STRING,
         allowNull: true

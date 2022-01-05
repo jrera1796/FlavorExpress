@@ -1,8 +1,9 @@
 async function newFormHandler(event) {
     event.preventDefault();
-    const title = document.querySelector('input[name="new-title"]').value;
+    const title = document.querySelector('input[name="new-title"]').value.trim();
     const ingredients = document.querySelector('textarea[name="new-ingredients"]').value.trim();
     const direction = document.querySelector('textarea[name="new-direction"]').value.trim();
+    const express_hint = document.querySelector('textarea[name="new-hint"]').value.trim();
     const fileField = document.querySelector('input[type="file"]');
     const formData = new FormData();
 
@@ -21,6 +22,7 @@ async function newFormHandler(event) {
             title,
             ingredients,
             direction,
+            express_hint,
             photo_path
         }),
         headers: {
