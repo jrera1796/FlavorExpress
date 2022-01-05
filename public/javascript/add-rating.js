@@ -9,7 +9,7 @@ async function ratingHandler(event) {
 
     const rating_comment = document.querySelector('textarea[name="rating-body"]').value.trim();
     
-    console.log(rating_score)
+    
     const recipe_id = window.location.toString().split('/')[
         window.location.toString().split('/').length - 1
     ];
