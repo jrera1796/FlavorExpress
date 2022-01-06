@@ -1,3 +1,4 @@
+/* Header & navbar styling */
 header nav ul li a i {
     font-size: 2x;
     color:rgb(194, 87, 221) !important;
@@ -18,7 +19,9 @@ header nav ul {
 header nav ul li :hover {
     background: hsl(217, 71%, 53%) !important;
 }
+/* End of header styling */
 
+/* Homepage parallax styling background */
 .parallax {
     background:url('../img/fruit-in-water.jpg') no-repeat center;
     background-size: cover;
@@ -34,27 +37,35 @@ header nav ul li :hover {
 }
 
 .parallax-3 {
-    background:url('../img/spices.jpg') no-repeat center;
-    background-size: cover;
-    background-attachment: fixed;
-
-}
-
-.parallax-4 {
     background:url('../img/spaghetti.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
 
 }
 
-.parallax-5 {
+.parallax-4 {
     background:url('../img/steak.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.parallax-5 {
+    background:url('../img/spices.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;   
 }
 
 .bg-image {
     height: 1000px;
+}
+
+/* Background Pictures */
+.bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url(https://images.pexels.com/photos/952353/pexels-photo-952353.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
 }
 
 
