@@ -49,16 +49,17 @@ Step 2
       </div>
     </form>
     </div>
+    <h2 class = "subtitle is-2">Your Recipes</h2>
     {{#if recipes.length}}
-    <section>
-      <h2 class = "subtitle is-2">Your Recipes</h2>
-      <ul>
+    <section class="columns is-multiline">
+      
+      
         {{#each recipes as |recipe|}}
-        <li>
-          {{> recipe-info recipe}}<a href="/dashboard/edit/{{recipe.id}}" class="button is-info">Edit Recipe</a>
-        </li>
+        
+          {{> recipe-dash recipe}}
+        
         {{/each}}
-      </ul>
+      
     </section>
     {{/if}}
     </section>
