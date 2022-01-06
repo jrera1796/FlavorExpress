@@ -1,34 +1,54 @@
-<article>
-  <h2>Edit Recipe</h2>
-  <form class="edit-recipe-form">
-    <div>
-      <label for="edit-title">Edit Recipe Title:</label>
-      <input name="edit-title" type="text" value="{{recipe.title}}" />
-    </div>
+<section class="columns">
+  <section class="column">
+    <section class="column has-background-primary">
 
-    <div>
-      <text for="edit-ingredients">Edit Ingredients:</label>
-        <textarea name="edit-ingredients" type="text">{{recipe.ingredients}}</textarea>
-    </div>
-    <div>
-      <label for="edit-direction">Edit Direction</label>
-      <textarea name="edit-direction" type="text">{{recipe.direction}}</textarea>
-    </div>
-    <div>
-      <label for="edit-hint">Edit Hint</label>
-      <textarea name="edit-hint" type="text">{{recipe.express_hint}}</textarea>
-    </div>
-    <div>
-      <label for="edit-photo">Edit Photo</label>
-      <input type="file" name="recipe_pic" value="{{recipe.photo_path}}" />
-    </div>
-    <div>
-      <a href="/recipe/{{recipe.id}}">{{recipe.ratings.length}} {{format_plural "rating" recipe.ratings.length}}</a>
-    </div>
-    <button type="submit" id="edit-recipe-btn">Update Recipe</button>
-    <button type="submit" id="delete-recipe-btn">Delete Recipe</button>
-  </form>
-</article>
+      <h2 class="title is-1">Edit Recipe</h2>
+      <form class="edit-recipe-form column">
+        <div class="column">
+          <label class="subtitle is-2" class="subtitle is-1" for="edit-title">Edit Title:</label>
+          <input class="input" name="edit-title" type="text" value="{{recipe.title}}" />
+        </div>
+
+        <div class="column">
+          <label class="subtitle is-2" for="edit-ingredients">Edit Ingredients:</label>
+          <textarea class="textarea" name="edit-ingredients" type="text">{{recipe.ingredients}}</textarea>
+        </div>
+        <div class="column">
+          <label class="subtitle is-2" for="edit-direction">Edit Direction</label>
+          <textarea class="textarea" name="edit-direction" type="text">{{recipe.direction}}</textarea>
+        </div>
+        <div class="column">
+          <label class="subtitle is-2" for="edit-hint">Edit Hint</label>
+          <textarea class="textarea" name="edit-hint" type="text">{{recipe.express_hint}}</textarea>
+        </div>
+        <div class="column">
+          <label class="subtitle is-2" for="edit-photo">Edit Photo</label>
+          <div>
+            <div class="file is-info is-boxed column">
+              <label class="file-label">
+                <input class="file-input" type="file" name="recipe_pic" value="{{recipe.photo_path}}" />
+                <span class="file-cta">
+                  <span class="file-icon">
+                    <i class="fas fa-upload"></i>
+                  </span>
+                  <span class="file-label">
+                    Upload a photo…
+                  </span>
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <a href="/recipe/{{recipe.id}}">{{recipe.ratings.length}} {{format_plural "rating" recipe.ratings.length}}</a>
+        </div>
+        <button class="button is-warning" type="submit" id="edit-recipe-btn">Update Recipe</button>
+        <button class="button is-danger" type="submit" id="delete-recipe-btn">Delete Recipe</button>
+      </form>
+    </section>
+  </section>
+</section>
+
 {{#if loggedIn}}
 <script src="/javascript/edit-recipe.js"></script>
 <script src="/javascript/delete-recipe.js"></script>

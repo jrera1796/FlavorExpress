@@ -16,8 +16,14 @@ router.get('/recipes', (req, res) => { //get all recipe for recipes
                     attributes: ['username']
                 }
             }, //include its associated User
-            { model: User, attributes: ['username'] },
-            { model: Rating, attributes: ['rating_comment'] }
+            {
+                model: User,
+                attributes: ['username']
+            },
+            {
+                model: Rating,
+                attributes: ['rating_comment']
+            }
         ]
     }).then(recipeData => {
         const recipes = recipeData.map(recipe => recipe.get({
@@ -33,7 +39,9 @@ router.get('/recipes', (req, res) => { //get all recipe for recipes
 });
 
 router.get('/', (req, res) => {
-    res.render('homepage')
+    res.render('homepage', {
+        loggedIn: req.session.loggedIn
+    });
 });
 
 router.get('/recipe/:id', (req, res) => { //get single recipe
@@ -62,13 +70,20 @@ router.get('/recipe/:id', (req, res) => { //get single recipe
             });
             return;
         }
-        const recipe = recipeData.get({ plain: true });
+        const recipe = recipeData.get({
+            plain: true
+        });
 
         recipe.ingredients = recipe.ingredients.split('\n');
         recipe.direction = recipe.direction.split('\n');
         recipe.express_hint = recipe.express_hint.split('\n');
-        res.render('single-recipe', { recipe, loggedIn: req.session.loggedIn });
-    }).catch(err => { res.status(500).json(err); });
+        res.render('single-recipe', {
+            recipe,
+            loggedIn: req.session.loggedIn
+        });
+    }).catch(err => {
+        res.status(500).json(err);
+    });
 });
 
 router.get('/login', (req, res) => {
