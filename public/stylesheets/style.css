@@ -26,28 +26,19 @@ header nav ul li :hover {
     background:url('../img/fruit-in-water.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;  
-   
-    
 }
 
-.parallax-2 {
-    background:url('../img/avocado.jpg') no-repeat center;
-    background-size: cover;
-    background-attachment: fixed;   
-}
 
 .parallax-3 {
     background:url('../img/spaghetti.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
-
 }
 
 .parallax-4 {
     background:url('../img/steak.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
-
 }
 
 .parallax-5 {
@@ -57,7 +48,7 @@ header nav ul li :hover {
 }
 
 .bg-image {
-    height: 1000px;
+    height: 700px;
 }
 
 /* Background Pictures */
