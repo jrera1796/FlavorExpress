@@ -1,16 +1,16 @@
 
-<section class="columns">
-  <section class="column">
-    <section class="column has-background-primary">
-    <h2 class="title is-1"><strong>Create New Recipe</strong></h2>
+<section class="columns mb-0 pb-0">
+  <section class="column pb-0">
+    <section class="column bg">
+    <h2 class="title is-1 has-text-white"><strong>Create New Recipe</strong></h2>
     <div>
     <form class="new-recipe-form column" enctype="multipart/form-data">
       <div class="column">
-        <label class = "subtitle is-1" for="new-title">Title</label>
+        <label class = "subtitle is-1 has-text-white" for="new-title">Title</label>
         <input class = "input" placeholder = "Peanut Butter Cookie" type="text" id="new-title" name="new-title" />
       </div>
       <div class="column">
-        <label class = "subtitle is-2" for="new-ingredients">Ingredients</label>
+        <label class = "subtitle is-2 has-text-white" for="new-ingredients">Ingredients</label>
         <textarea class="textarea" 
         placeholder='½ cup butter
 1 cup peanut butter
@@ -18,7 +18,7 @@
 ...' id="new-ingredients" name="new-ingredients"></textarea>
       </div>
       <div class="column">
-        <label class = "subtitle is-2" for="new-direction">Direction</label>
+        <label class = "subtitle is-2 has-text-white" for="new-direction">Direction</label>
         <textarea class="textarea" placeholder="Step 1
 Preheat oven to 350 degrees F (175 degrees C).
 
@@ -26,7 +26,7 @@ Step 2
 ..." id="new-direction" name="new-direction"></textarea>
       </div>
       <div class="column">
-        <label class = "subtitle is-2" for="new-hint">Express Hint</label>
+        <label class = "subtitle is-2 has-text-white" for="new-hint">Express Hint</label>
         <textarea class="textarea" id="new-hint" name="new-hint" placeholder="Useful information on how to prepare the cooking ingredients..."></textarea>
       </div>
       <div>
@@ -49,16 +49,17 @@ Step 2
       </div>
     </form>
     </div>
+    <h2 class = "subtitle is-2 has-text-white">Your Recipes</h2>
     {{#if recipes.length}}
-    <section>
-      <h2 class = "subtitle is-2">Your Recipes</h2>
-      <ul>
+    <section class="columns is-multiline">
+      
+      
         {{#each recipes as |recipe|}}
-        <li>
-          {{> recipe-info recipe}}<a href="/dashboard/edit/{{recipe.id}}" class="button is-info">Edit Recipe</a>
-        </li>
+        
+          {{> recipe-dash recipe}}
+        
         {{/each}}
-      </ul>
+      
     </section>
     {{/if}}
     </section>
