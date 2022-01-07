@@ -14,12 +14,21 @@
                 src="https://pj2-test-bucket.s3.us-west-1.amazonaws.com/{{photo_path}}">
             </div>
             <div class="content column is-auto">
+<<<<<<< HEAD
+              <p class="title is-4 box has-background-primary" style="text-align:left;">{{#each ingredients}}{{this}}<br />{{/each}}</p>
+            </div>
+          </div>
+          <p class="content title is-4 box has-background-primary" style="text-align:left;">{{#each direction}}{{this}}<br />{{/each}}</p>
+          <span class="box has-background-primary" style="margin-left:20%; margin-right:20%;"> Express Hint <i class="far fa-lightbulb"></i>
+            <p class="title is-4">{{#each express_hint}}{{this}}<br />{{/each}}</p>
+=======
               <p class="title is-4 box has-background-primary has-text-white" style="text-align:left;">{{#each ingredients}}{{this}}<br />{{/each}}</p>
             </div>
           </div>
           <p class="content title is-4 box has-background-primary has-text-white" style="text-align:left;">{{#each direction}}{{this}}<br />{{/each}}</p>
           <span class="express-hint box has-background-primary"> Express Hint <i class="far fa-lightbulb"></i>
             <p class="title is-4 has-text-white">{{#each express_hint}}{{this}}<br />{{/each}}</p>
+>>>>>>> 345f7980ac767267702daedfb1a1912031e95b6f
           </span>
           <p class="subtitle is-6 has-text-white">Recipe by: {{user.username}} on {{format_date created_at}}</p>
         </div>
