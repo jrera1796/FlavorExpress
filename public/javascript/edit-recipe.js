@@ -17,6 +17,7 @@ async function editFormHandler(event) {
     const data = await upload.json()
     const photo_path = data.pathname
 
+
     const response = await fetch(`/api/recipes/${id}`, {
         method: 'PUT',
         body: JSON.stringify({ title, ingredients, direction, express_hint, photo_path }),
