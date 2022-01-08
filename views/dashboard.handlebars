@@ -1,71 +1,69 @@
-
 <section class="columns mb-0 pb-0">
-  <section class="column pb-0">
-    <section class="column bg">
-    <h2 class="title is-1 has-text-white"><strong>Create New Recipe</strong></h2>
-    <div>
-    <form class="new-recipe-form column" enctype="multipart/form-data">
-      <div class="column">
-        <label class = "subtitle is-1 has-text-white" for="new-title">Title</label>
-        <input class = "input" placeholder = "Peanut Butter Cookie" type="text" id="new-title" name="new-title" />
-      </div>
-      <div class="column">
-        <label class = "subtitle is-2 has-text-white" for="new-ingredients">Ingredients</label>
-        <textarea class="textarea" 
-        placeholder='½ cup butter
+  <section class="column bg  pb-0">
+    <section class="column express-hint box bg-theme">
+      <h2 class="title is-1 has-text-white"><strong>Create New Recipe</strong></h2>
+      <div>
+        <form class="new-recipe-form column" enctype="multipart/form-data">
+          <div class="column">
+            <label class="subtitle is-1 has-text-white" for="new-title">Title</label>
+            <input class="input" placeholder="Peanut Butter Cookie" type="text" id="new-title" name="new-title" />
+          </div>
+          <div class="column">
+            <label class="subtitle is-2 has-text-white" for="new-ingredients">Ingredients</label>
+            <textarea class="textarea" placeholder='½ cup butter
 1 cup peanut butter
 2 eggs
 ...' id="new-ingredients" name="new-ingredients"></textarea>
-      </div>
-      <div class="column">
-        <label class = "subtitle is-2 has-text-white" for="new-direction">Direction</label>
-        <textarea class="textarea" placeholder="Step 1
+          </div>
+          <div class="column">
+            <label class="subtitle is-2 has-text-white" for="new-direction">Direction</label>
+            <textarea class="textarea" placeholder="Step 1
 Preheat oven to 350 degrees F (175 degrees C).
 
 Step 2
 ..." id="new-direction" name="new-direction"></textarea>
-      </div>
-      <div class="column">
-        <label class = "subtitle is-2 has-text-white" for="new-hint">Express Hint</label>
-        <textarea class="textarea" id="new-hint" name="new-hint" placeholder="Useful information on how to prepare the cooking ingredients..."></textarea>
-      </div>
-      <div>
-        <div class="file is-info is-boxed column">
-          <label class="file-label">
-            <input class="file-input" type="file" name="recipe_pic">
-            <span class="file-cta">
-              <span class="file-icon">
-                <i class="fas fa-upload"></i>
-              </span>
-              <span class="file-label">
-                Upload a photo…
-              </span>
-            </span>
-          </label>
-        </div>
-      </div>
-      <div class="has-text-centered">
-      <button type="submit" class="button is-warning">Create</button>
-      </div>
-    </form>
-    </div>
-    <h2 class = "subtitle is-2 has-text-white">Your Recipes</h2>
-    {{#if recipes.length}}
-    <section class="columns is-multiline">
-      
-      
+          </div>
+          <div class="column">
+            <label class="subtitle is-2 has-text-white" for="new-hint">Express Hint</label>
+            <textarea class="textarea" id="new-hint" name="new-hint"
+              placeholder="Useful information on how to prepare the cooking ingredients..."></textarea>
+          </div>
+          <div>
+            <div class="file is-info is-boxed column">
+              <label class="file-label">
+                <input class="file-input" type="file" name="recipe_pic">
+                <span class="file-cta">
+                  <span class="file-icon">
+                    <i class="fas fa-upload"></i>
+                  </span>
+                  <span class="file-label">
+                    Upload a photo…
+                  </span>
+                </span>
+              </label>
+            </div>
+          </div>
+          <div class="has-text-centered">
+            <button type="submit" class="button is-warning">Create</button>
+          </div>
+        </form>
+      </div></section>
+      <section class="bg-theme">
+      <h2 class="subtitle is-2 has-text-white">Your Recipes</h2>
+      {{#if recipes.length}}
+      <section class="columns is-multiline">
+
+
         {{#each recipes as |recipe|}}
-        
-          {{> recipe-dash recipe}}
-        
+
+        {{> recipe-dash recipe}}
+
         {{/each}}
-      
-    </section>
-    {{/if}}
+
+      </section>
+      {{/if}}
     </section>
   </section>
 </section>
 
 <script src="/javascript/add-recipe.js"></script>
-
-  
