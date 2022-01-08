@@ -82,14 +82,6 @@ router.get('/recipe/:id', (req, res) => { //get single recipe
         } catch (error) {
             console.log(error)
         }
-        // try {
-        // recipe.ratings[0].session_user = req.session.username  
-
-        // } catch (error) {
-
-        // }
-
-        console.log(recipe);
         recipe.ingredients = recipe.ingredients.split('\n');
         recipe.direction = recipe.direction.split('\n');
         recipe.express_hint = recipe.express_hint.split('\n');
