@@ -1,27 +1,33 @@
 <article class="recipe">
   <div class="recipe-info">
-    <div class="card">
-      <div class="card-image">
-        <figure class="image is-128x128" >
-          <img src="https://pj2-test-bucket.s3.us-west-1.amazonaws.com/{{photo_path}}" class="center" width="100" height="100" alt="Placeholder image">
-        </figure>
-      </div>
+    <div class="card"
+      style="background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url(https://images.pexels.com/photos/952353/pexels-photo-952353.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
       <div class="card-content">
-        <div class="media">
-          <div class="media-content">
-            <p class="title is-4">{{title}}</p>
-            <p class="title is-4">{{#each ingredients}}{{this}}<br />{{/each}}</p>
-            <p class="title is-4">{{#each direction}}{{this}}<br />{{/each}}</p>
-            <p class="title is-4">{{#each express_hint}}{{this}}<br />{{/each}}</p>
-            <p class="subtitle is-6">Recipe by: {{user.username}}</p>
-          </div>
-        </div>
+        <h1 class="title is-2 has-text-white">{{title}}</h1>
         <div class="content">
-          <a href="/recipe/{{id}}">{{rating.length}} {{format_plural "Check out Review" rating.length}}</a>
-          <br>
-          <time>{{format_date created_at}}</time>
+          <div class="media-content columns">
+            <div class="column content is-half">
+              <img class="box bg-theme"
+                src="https://pj2-test-bucket.s3.us-west-1.amazonaws.com/{{photo_path}}">
+            </div>
+            <div class="content column is-auto">
+              <p class="title is-4 box bg-theme has-text-white" style="text-align:left;">{{#each ingredients}}{{this}}<br />{{/each}}</p>
+            </div>
+          </div>
+          <p class="content title is-4 box bg-theme has-text-white" style="text-align:left;">{{#each direction}}{{this}}<br />{{/each}}</p>
+          <span class="express-hint box bg-theme"> Express Hint <i class="far fa-lightbulb"></i>
+            <p class="title is-4 has-text-white">{{#each express_hint}}{{this}}<br />{{/each}}</p>
+          </span>
+          <p class="subtitle is-6 has-text-white">Recipe by: {{user.username}} on {{format_date created_at}}</p>
         </div>
+      </div>
+      <div class="content">
+        <br>
       </div>
     </div>
+  </div>
   </div>
 </article>

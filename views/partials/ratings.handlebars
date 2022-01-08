@@ -1,11 +1,11 @@
 <div class="block">
   {{#each this}}
   <div class="block">
-    <div class="box" style="inline-flex">
+    <div class="bg-theme mb-0 pt-5 pl-5 pr-5" style="inline-flex; color:white;">
       {{user.username}} on {{format_date created_at}}
 
       {{#ifEquals rating_score 1}}
-      <span class="fa fa-cookie-bite"></span>
+      <span class="fa fa-cookie-bite"</span>
       {{/ifEquals}}
 
       {{#ifEquals rating_score 2}}
@@ -33,7 +33,9 @@
       <div class="text">
         {{rating_comment}}
       </div>
-      <button id="delete-rating" class="button" type="submit" value="{{id}}">Delete Rating</button>
+      <div class="pt-2">
+        <button id="delete-rating" class="button is-link" type="submit" value="{{id}}">Delete Rating</button>
+      </div>
     </div>
 <script src='../javascript/delete-rating.js'></script>
     </section>
