@@ -1,9 +1,9 @@
 const router = require('express').Router();
 const userRoutes = require('./user-routes');
-const recipeRoutes = require('./recipeRoutes');
-const ratingRoutes = require('./ratingRoutes');
+const recipeRoutes = require('./recipe-routes');
+const ratingRoutes = require('./rating-routes');
 
-const photoRoutes = require('./photoRoutes')
+const photoRoutes = require('./photo-routes')
 
 router.use('/users', userRoutes);
 router.use('/recipes', recipeRoutes);
