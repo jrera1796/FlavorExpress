@@ -1,5 +1,17 @@
-bg-theme {
+.bg-theme {
     background-color: rgba(58, 78, 92, 0.90) !important;
+}
+
+.bg-image {
+    height: 700px;
+}
+
+/* Background Pictures */
+.bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url(https://images.pexels.com/photos/952353/pexels-photo-952353.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
 }
 
 /* Header & navbar styling */
@@ -53,22 +65,18 @@ header nav ul li :hover {
     background-attachment: fixed;   
 }
 
-.bg-image {
-    height: 700px;
-}
 
-/* Background Pictures */
-.bg {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-image: url(https://images.pexels.com/photos/952353/pexels-photo-952353.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
-}
 
 
 footer {
     background-color: rgba(58, 78, 92, 0.90) !important;
     padding-bottom: 70px !important;
+
+}
+
+footer p a {
+    color: yellow;
+    font-weight: bold;
 }
 
 .generate-recipes {
@@ -148,4 +156,12 @@ footer {
     color:yellow; 
     margin-left:20%; 
     margin-right:20%;
+}
+
+@media only screen and (max-width: 768px) {
+    .recipe-card {
+        margin: 20px;
+        flex: 100%;
+        max-width: 100%;
+    }
 }
