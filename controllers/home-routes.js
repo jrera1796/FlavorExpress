@@ -73,12 +73,23 @@ router.get('/recipe/:id', (req, res) => { //get single recipe
         const recipe = recipeData.get({
             plain: true,
         });
-  
-        // for (let index = 0; index < recipe.length; index++) {
-        //     console.log('test')
-        //     recipe.ratings[index].session_user = req.session.username  
+
+        try {
+            for (let i = 0; i < recipe.ratings.length; i++) {
+                console.log('test')
+                recipe.ratings[i].session_user = req.session.username
+            }
+        } catch (error) {
+            console.log(error)
+        }
+        // try {
+        // recipe.ratings[0].session_user = req.session.username  
+
+        // } catch (error) {
+
         // }
-        recipe.ratings[0].session_user = req.session.username 
+
+        console.log(recipe);
         recipe.ingredients = recipe.ingredients.split('\n');
         recipe.direction = recipe.direction.split('\n');
         recipe.express_hint = recipe.express_hint.split('\n');

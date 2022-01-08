@@ -33,11 +33,11 @@
       <div class="text">
         {{rating_comment}}
       </div>
-      {{!-- {{#ifEquals user.username session_user }} --}}
+      {{#ifEquals user.username session_user }}
       <div class="pt-2">
         <button id="delete-rating" class="button is-link" type="submit" value="{{id}}">Delete Rating</button>
       </div>
-      {{!-- {{/ifEquals}} --}}
+      {{/ifEquals}}
     </div>
     <script src='../javascript/delete-rating.js'></script>
     </section>
