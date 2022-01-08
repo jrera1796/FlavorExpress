@@ -237,8 +237,8 @@ footer p a {
 
     .recipe-card {
         margin: 20px;
-        flex: 100%;
-        max-width: 100%;
+        flex: 80%;
+        max-width: 80%;
     }
 }
 
