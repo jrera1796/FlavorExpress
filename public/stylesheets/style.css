@@ -1,3 +1,7 @@
+bg-theme {
+    background-color: rgba(58, 78, 92, 0.90) !important;
+}
+
 /* Header & navbar styling */
 header nav ul li a i {
     font-size: 2x;
@@ -20,6 +24,8 @@ header nav ul li :hover {
     background: hsl(217, 71%, 53%) !important;
 }
 /* End of header styling */
+
+
 
 /* Homepage parallax styling background */
 .parallax {
@@ -61,6 +67,7 @@ header nav ul li :hover {
 
 
 footer {
+    background-color: rgba(58, 78, 92, 0.90) !important;
     padding-bottom: 70px !important;
 }
 
