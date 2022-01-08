@@ -71,9 +71,17 @@ router.get('/recipe/:id', (req, res) => { //get single recipe
             return;
         }
         const recipe = recipeData.get({
-            plain: true
+            plain: true,
         });
 
+        try {
+            for (let i = 0; i < recipe.ratings.length; i++) {
+                console.log('test')
+                recipe.ratings[i].session_user = req.session.username
+            }
+        } catch (error) {
+            console.log(error)
+        }
         recipe.ingredients = recipe.ingredients.split('\n');
         recipe.direction = recipe.direction.split('\n');
         recipe.express_hint = recipe.express_hint.split('\n');
@@ -81,6 +89,7 @@ router.get('/recipe/:id', (req, res) => { //get single recipe
             recipe,
             loggedIn: req.session.loggedIn
         });
+        console.log(recipe)
     }).catch(err => {
         res.status(500).json(err);
     });
